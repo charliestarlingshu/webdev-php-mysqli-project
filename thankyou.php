@@ -22,6 +22,22 @@ include("includes/header.php");
       <h2>Thank You</h2>
     </div>
     <section class="twoColumn">
+    <div>
+      <table>
+        <?php
+          foreach($_POST as $key => $value){
+            echo "<tr>";
+            echo "<td class=\"uc\">";
+            echo $key;
+            echo "</td>";
+            echo "<td>";
+            echo $value;
+            echo "</td>";
+            echo "<tr>";
+          }
+        ?>
+      </table>
+    </div>
 
 <div class="sideBar">
         <h3>Featured Film</h3>
@@ -32,7 +48,7 @@ include("includes/header.php");
   </main>
 </div>
 <?php
-// add Footer
+include("includes/footer.php");
 ?>
 <script src="js/main.js"></script>
 </body>
